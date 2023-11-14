@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-8">
+    <div class="card show-card">
+      <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <%= cl_image_tag @property.photo.key, alt: "text", class: "card-img-top d-block w-100" %>
+          </div>
+          <div class="carousel-item">
+            <%= cl_image_tag @property.photo.key, alt: "text", class: "card-img-top d-block w-100" %>
+          </div>
+          <div class="carousel-item">
+              <%= cl_image_tag @property.photo.key, alt: "text", class: "card-img-top d-block w-100" %>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+            <div class="card-body">
+              <h1 class="card-title"><%= @property.name %></h1>
+              <p class="card-text"><%= @property.category %> <%= @property.location %></p>
+              <p class="card-text"><%= @property.description %></p>
+              <p class="card-text"><%= @property.price %></p>
+              <%# <a href="#" class="btn btn-primary">Book now! <%= link_to booking_path %></a>
+            </div>
+          </div>
+        </div>
+
+    <%# <p>Form for booking pls edit after the booking controller is done</p> %>
+    <div class="col-4 d-flex align-items-center ">
+      <div class="card card-form">
+      <%= simple_form_for([@property, @booking]) do |f| %>
+          <%= f.input :start_date, html5: true %>
+          <%= f.input :end_date, html5: true %>
+          <div class="button">
+          <%= f.submit class: 'btn btn-primary' %>
+          </div>
+      <% end %>
+
+      </div>
+    </div>
+</div>
+
+<%# <p>guide for property</p> %>
+<%# <%= @property.name %>
+<%# <%= @property.description %>
+<%# <%= @property.category %>
+<%# <%= @property.location %>
+<%# <%= @property.price %>

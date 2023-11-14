@@ -1,8 +1,9 @@
 class Property < ApplicationRecord
   has_one_attached :photo
   belongs_to :user
+  has_many :bookings, dependent: :destroy
 
-  CATEGORY = ["Hospitals", "Houses", "Mansion"]
+  CATEGORY = ["Hospital", "House", "Mansion", "Cemetery", "Forest", "Tower", "Castle", "Ferry"]
 
   validates :description, length: { minimum: 20 }
   validates :name, presence: true, uniqueness: true

@@ -32,7 +32,7 @@ property_1 = Property.create!(
   user: user1,
   name: "Eternal Shadows Manor",
   description: "Discover the echoes of the past in this historic haunted manor. Located in the heart of Sleepy Hollow, this chilling abode promises an unforgettable journey through the spectral unknown.",
-  category: "Hosptial",
+  category: "Hospital",
   location: "Osaka",
   price: 2000
 )

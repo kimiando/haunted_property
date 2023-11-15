@@ -4,7 +4,11 @@
 <div class="card_container row">
   <div class="side_bar">
   <% Property::CATEGORY.each do |category| %>
-  <a class="categorybutton" href="/properties?category=<%= category %>"><%= category %></a>
+    <% if category == params[:category]%>
+      <a class="categorybutton active" href="/properties?category=<%= category %>"><%= category %></a>
+    <% else %>
+    <a class="categorybutton" href="/properties?category=<%= category %>"><%= category %></a>
+    <% end %>
   <% end %>
   </div>
 
@@ -13,7 +17,7 @@
     <div class="card">
       <div class="image_card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path property.photo.key, height: 300, crop: :fill %>')">
       </div>
-        <p class="property_name"><%= link_to property.name, property_path(property) %></p>
+        <%= link_to property.name, property_path(property), class: "property_name" %>
     </div>
     <% end %>
   </div>

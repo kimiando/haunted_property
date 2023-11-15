@@ -11,3 +11,11 @@
   margin: 8px;
   font-size: 20px;
 }
+
+.categorybutton:hover {
+  color: black;
+}
+
+.categorybutton.active {
+  color: red;
+}

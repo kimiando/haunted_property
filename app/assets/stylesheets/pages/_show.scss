@@ -20,6 +20,7 @@ img {
 .button{
   margin: 0 auto;
   width: min-content;
+  text-decoration: none;
 }
 
 
@@ -32,6 +33,7 @@ img {
   font-size: 16px;
   margin: 4px 2px;
   transition: 0.3s;
+  text-decoration: none;
 }
 .btn:hover {
   background-color: #3e768e;

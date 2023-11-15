@@ -1,6 +1,11 @@
 // Specific CSS for your home-page
-.home {
+.background-home {
   background-image: asset-url("home.gif");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.container-home{
+display: block;
+align-content: center;
 }

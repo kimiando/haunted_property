@@ -6,4 +6,9 @@ class PropertiesController < ApplicationController
       @properties = Property.all
     end
   end
+
+  def show
+    @property = Property.find(params[:id])
+    @booking = Booking.new
+  end
 end

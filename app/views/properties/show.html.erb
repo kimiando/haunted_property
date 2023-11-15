@@ -4,7 +4,7 @@
       <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <%= cl_image_tag @property.photo.key, alt: "text", class: "card-img-top d-block w-100" %>
+            <%= cl_image_tag @property.photo.key, alt: "text", class: "card-img-top d-block w-100"%>
           </div>
           <div class="carousel-item">
             <%= cl_image_tag @property.photo.key, alt: "text", class: "card-img-top d-block w-100" %>
@@ -24,7 +24,7 @@
       </div>
             <div class="card-body">
               <h1 class="card-title"><%= @property.name %></h1>
-              <p class="card-text"><%= @property.category %> <%= @property.location %></p>
+              <h3 class="card-text"><%= @property.category %> <%= @property.location %></h3>
               <p class="card-text"><%= @property.description %></p>
               <p class="card-text"><%= @property.price %></p>
               <%# <a href="#" class="btn btn-primary">Book now! <%= link_to booking_path %></a>

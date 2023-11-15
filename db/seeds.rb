@@ -138,6 +138,184 @@ property_10 = Property.create!(
 file = File.open(Rails.root.join("db/seeds/properties/castle1.avif"))
 property_10.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
+property_11 = Property.create!(
+  user: user3,
+  name: "Widow's Watch Mansion",
+  description: "Perched atop a cliff overlooking the restless sea, this haunted mansion in Moonlight Cove is rumored to be the residence of a grieving widow's ghost, forever waiting for her lost love.",
+  category: "Cemetery",
+  location: "Berlin",
+  price: 3200
+)
+file = File.open(Rails.root.join("db/seeds/properties/cemetery2.jpeg"))
+property_11.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+
+property_12 = Property.create!(
+  user: user4,
+  name: "Spectral Grove Retreat",
+  description: "Hidden within an ancient, mist-shrouded forest, this haunted retreat offers an escape into nature's eerie embrace. Encounter ethereal spirits as you wander through the spectral grove.",
+  category: "Cemetery",
+  location: "Willowbrook",
+  price: 4800
+)
+file = File.open(Rails.root.join("db/seeds/properties/cemetery3.jpg"))
+property_12.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+
+property_13 = Property.create!(
+  user: user1,
+  name: "Eclipsed Elegance Estate",
+  description: "Step back in time as you explore this once-grand estate in the historic district of Shadowbrook. The faded elegance is eclipsed by the paranormal, revealing a tapestry of ghostly tales.",
+  category: "Forest",
+  location: "Eldorado Springs",
+  price: 4200
+)
+file = File.open(Rails.root.join("db/seeds/properties/forest1.jpeg"))
+property_13.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+
+property_14 = Property.create!(
+  user: user2,
+  name: "Harmony Hall of Whispers",
+  description: "Located in the heart of Harmonyville, this historic hall is known for its haunting whispers that echo through its corridors. Uncover the secrets of the past within its spectral walls.",
+  category: "Forest",
+  location: "Raven's Hollow",
+  price: 2800
+)
+file = File.open(Rails.root.join("db/seeds/properties/forest2.jpeg"))
+property_14.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+
+property_15 = Property.create!(
+  user: user3,
+  name: "Apparition Acres Farmhouse",
+  description: "Escape to the countryside and experience the haunted history of this farmhouse surrounded by vast fields. The spirits of previous inhabitants are said to linger, manifesting in mysterious ways.",
+  category: "Forest",
+  location: "Crescent Bay",
+  price: 3600
+)
+file = File.open(Rails.root.join("db/seeds/properties/forest3.jpeg"))
+property_15.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+
+property_16 = Property.create!(
+  user: user4,
+  name: "Wraithwind Manor",
+  description: "Nestled at the edge of the sinister Wraithwind Forest, this manor is a haven for spectral beings. Encounter the whispers of the wind and the shadows that dance within the haunted halls.",
+  category: "Hospital",
+  location: "Sterling Falls",
+  price: 4500
+)
+file = File.open(Rails.root.join("db/seeds/properties/hospital2.jpeg"))
+property_16.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+
+property_17 = Property.create!(
+  user: user1,
+  name: "Ephemeral Enclave",
+  description: "This secluded enclave, hidden in the heart of the Enigma Mountains, is a sanctuary for ephemeral spirits. Embrace the mystical atmosphere as you traverse the ghostly terrain.",
+  category: "Hospital",
+  location: "Berlin",
+  price: 5100
+)
+file = File.open(Rails.root.join("db/seeds/properties/hospital3.avif"))
+property_17.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+
+property_18 = Property.create!(
+  user: user2,
+  name: "Labyrinth of Lost Souls",
+  description: "Explore the eerie labyrinth hidden beneath the city streets. This underground network is rumored to be a passage to the afterlife, with lost souls wandering through its haunted tunnels.",
+  category: "Hospital",
+  location: "Berlin",
+  price: 2300
+)
+file = File.open(Rails.root.join("db/seeds/properties/hospital4.jpeg"))
+property_18.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+
+property_19 = Property.create!(
+  user: user3,
+  name: "Midnight Masquerade Mansion",
+  description: "Enter a world of mystery and intrigue in this mansion where a ghostly masquerade unfolds every night at midnight. Witness the spirits donning phantom masks as they dance through the ages.",
+  category: "Mansion",
+  location: "Berlin",
+  price: 3400
+)
+file = File.open(Rails.root.join("db/seeds/properties/mansion1.webp"))
+property_19.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+
+property_20 = Property.create!(
+  user: user4,
+  name: "Shiverstone Castle",
+  description: "Situated on the edge of a frozen lake, Shiverstone Castle is a chilling fortress with a history of icy apparitions. Encounter the frozen echoes of the past as you brave its haunted halls.",
+  category: "Mansion",
+  location: "Berlin",
+  price: 3900
+)
+file = File.open(Rails.root.join("db/seeds/properties/mansion2.jpeg"))
+property_20.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+
+property_21 = Property.create!(
+  user: user1,
+  name: "Wispwood Wonders Cottage",
+  description: "Escape to the whimsical Wispwood Wonders Cottage, where mystical wisps illuminate the night. Encounter enchanted creatures and the ethereal wonders that reside in this charming abode.",
+  category: "Mansion",
+  location: "Berlin",
+  price: 4400
+)
+file = File.open(Rails.root.join("db/seeds/properties/mansion3.webp"))
+property_21.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+
+property_22 = Property.create!(
+  user: user2,
+  name: "Cursed Crypt Courtyard",
+  description: "Step into the shadows of the cursed courtyard, where an ancient crypt holds the key to spectral secrets. Unearth the chilling tales that linger within the ghostly walls.",
+  category: "Tower",
+  location: "Berlin",
+  price: 3200
+)
+file = File.open(Rails.root.join("db/seeds/properties/tower2.webp"))
+property_22.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+
+property_23 = Property.create!(
+  user: user3,
+  name: "Eternal Echoes Emporium",
+  description: "Venture into this haunted emporium, where echoes of past shoppers linger among the eerie merchandise. Located in the heart of Echo Hollow, it offers a shopping experience like no other.",
+  category: "Tower",
+  location: "Berlin",
+  price: 2700
+)
+file = File.open(Rails.root.join("db/seeds/properties/tower3.jpeg"))
+property_23.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+
+property_24 = Property.create!(
+  user: user4,
+  name: "Banshee Bluff Bungalow",
+  description: "Perched on a bluff overlooking the misty moors, this bungalow is said to be haunted by the wailing banshees of old. Experience the spine-tingling echoes that resonate through the night.",
+  category: "Tower",
+  location: "Berlin",
+  price: 3800
+)
+file = File.open(Rails.root.join("db/seeds/properties/tower4.webp"))
+property_24.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+
+# property_25 = Property.create!(
+#   user: user1,
+#   name: "Phantom Phoenix Plaza",
+#   description: "Discover the mysterious Phantom Phoenix Plaza, a shopping district frozen in time. The spectral storefronts showcase a bygone era, and the phoenix's ghostly presence is said to bring rebirth.",
+#   category: "Mansion",
+#   location: "Berlin",
+#   price: 4900
+# )
+# file = File.open(Rails.root.join("db/seeds/properties/mansion2.jpeg"))
+# property_25.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # # Property Seeds
 # 100.times do
 #   property = Property.new(

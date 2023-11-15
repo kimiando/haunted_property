@@ -1,1 +1,6 @@
 // Specific CSS for your home-page
+.home {
+  background-image: asset-url("home.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

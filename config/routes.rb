@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get "/dashboard", to: "pages#dashboard"
 
-
   resources :properties, only: [:index, :show, :new, :create] do
     resources :bookings, only: [:create]
     resources :reviews, only: [:create]

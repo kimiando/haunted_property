@@ -24,9 +24,9 @@
       </div>
             <div class="card-body">
               <h1 class="card-title"><%= @property.name %></h1>
-              <h3 class="card-text"><%= @property.category %> <%= @property.location %></h3>
+              <h5 class="card-text"><strong>¥<%= @property.price %></strong></h5>
+              <h3 class="card-text"><%= @property.category %>, <%= @property.location %></h3>
               <p class="card-text"><%= @property.description %></p>
-              <p class="card-text"><%= @property.price %></p>
               <%# <a href="#" class="btn btn-primary">Book now! <%= link_to booking_path %></a>
             </div>
           </div>

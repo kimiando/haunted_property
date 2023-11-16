@@ -42,3 +42,16 @@ body{
   background-color: #3e768e;
   color: white;
 }
+
+.detail_container {
+  padding-bottom: 48px;
+}
+
+.card_title_text {
+  display: flex;
+  align-items: baseline;
+}
+
+.property-price {
+  margin-left: 24px;
+}

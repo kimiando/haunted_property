@@ -1,0 +1,38 @@
+<div class="card-product">
+  <%= cl_image_tag booking.property.photo.key, height: 100, crop: :fill %>
+  <div class="card-product-infos">
+    <p>User: <%= booking.user.name %></p>
+    <p>Booking start: <%= booking.start_date %></p>
+    <p>Booking end: <%= booking.end_date %></p>
+    <p>Property Booked: <%= booking.property.name %></p>
+    </div>
+    <% if booking.rejected? %>
+    <h3 class="red"><%= booking.status %></h3>
+    <% elsif booking.accepted? %>
+    <h3 class="green"><%= booking.status %></h3>
+    <% else %>
+    <h3><%= booking.status %></h3>
+    <% end %>
+
+
+
+
+<% if booking.pending? %>
+  <!-- Display Forms-->
+   <div class="d-flex">
+                <%= simple_form_for booking do |f| %>
+                  <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
+                  <%= f.submit 'Accept', class: 'btn btn-info' %>
+                <% end %>
+
+                <%= simple_form_for booking do |f| %>
+                  <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
+                  <%= f.submit 'Reject', class: 'btn btn-light' %>
+                <% end %>
+              </div>
+<% else %>
+  <!-- Display Status-->
+  <p class='booking-tag'><%= booking.status %></p>
+<% end %>
+
+</div>

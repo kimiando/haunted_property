@@ -19,17 +19,19 @@
         <label for="tab1">Request</label>
 
         <input type="radio" id="tab2" name="tabGroup1" class="tab">
-        <label for="tab2">😭</label>
+        <label for="tab2">Accepted</label>
 
         <input type="radio" id="tab3" name="tabGroup1" class="tab">
-        <label for="tab3">🎃</label>
+        <label for="tab3">Completed</label>
 
 
         <div class="tab__content">
-        <div class="card-wrapper">
-        <%# need to but a button to see if the items are accepted or rejected %>
-        <h2>hello</h2>
-        </div>
+          <div class="card-wrapper">
+          <%# need to but a button to see if the items are accepted or rejected %>
+            <% @bookings.each do |booking| %>
+              <%= render "property_request", booking: booking %>
+            <% end %>
+          </div>
         </div>
 
         <div class="tab__content">

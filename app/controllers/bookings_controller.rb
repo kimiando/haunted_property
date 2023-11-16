@@ -12,6 +12,20 @@ class BookingsController < ApplicationController
     end
   end
 
+  # bookings_controller.rb
+  def update
+    @booking = Booking.find(params[:id])
+    if @booking.update(booking_params)
+      # redirect_to # up to you...
+    else
+      # render # where was the booking update form?
+    end
+  end
+
+  def pending?
+    status == 'pending'
+  end
+
   private
 
   def booking_params

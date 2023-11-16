@@ -1,4 +1,4 @@
-<div class="row">
+<div class="detail_container row">
   <div class="col-8">
     <div class="card show-card">
       <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
@@ -23,8 +23,10 @@
         </button>
       </div>
             <div class="card-body">
-              <h1 class="card-title"><%= @property.name %></h1>
-              <h5 class="card-text"><strong>¥<%= @property.price %></strong></h5>
+              <div class="card_title_text">
+                <h1 class=""><%= @property.name %></h1>
+                <h5 class="property-price"><strong> ¥<%= @property.price %> / night</strong></h5>
+              </div>
               <h3 class="card-text"><%= @property.category %>, <%= @property.location %></h3>
               <p class="card-text"><%= @property.description %></p>
               <%# <a href="#" class="btn btn-primary">Book now! <%= link_to booking_path %></a>
@@ -39,12 +41,25 @@
           <%= f.input :start_date, html5: true %>
           <%= f.input :end_date, html5: true %>
           <div class="button">
-          <%= f.submit class: 'btn btn-primary' %>
+          <%= f.submit "Book now", class: 'btn btn-primary' %>
           </div>
       <% end %>
 
       </div>
     </div>
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
 </div>
 
 <%# <p>guide for property</p> %>

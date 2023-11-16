@@ -1,40 +1,13 @@
 <%# <div class="container"> %>
-  <div class="row">
-    <div class="col-4">
-    <div class="frame">
-      <div class="center">
-
-        <div class="profile">
-          <div class="image">
-            <div class="circle-1"></div>
-            <div class="circle-2"></div>
-            <img src="https://100dayscss.com/codepen/jessica-potter.jpg" width="70" height="70" alt="Jessica Potter">
-          </div>
-
-          <div class="name"><%= @user.name %></div>
-          <div class="job"></div>
-
-          <div class="actions">
-            <button class="btn">My Bookings</button>
-            <button class="btn">My Rentals</button>
-          </div>
-        </div>
-
-        <%# <div class="stats">
-          <div class="box">
-            <span class="value">523</span>
-            <span class="parameter">Posts</span>
-          </div>
-          <div class="box">
-            <span class="value">1387</span>
-            <span class="parameter">Likes</span>
-          </div>
-          <div class="box">
-            <span class="value">146</span>
-            <span class="parameter">Follower</span>
-          </div>
-        </div> %>
-      </div>
+  <div class="booking-container row">
+    <div class="profile-container col-4">
+  <div class="profile-photo" style="background-image: url(<%= image_path 'avatar1.png' %>)">
+    </div>
+    <div class="">
+      <h1>Name</h2>
+      <p>My profile (link/botton) </p>
+      <p>My bookings (button)</p>
+      <p>My Rentals (button)</p>
     </div>
   </div>
 
@@ -73,4 +46,18 @@
       </div>
     </div>
   </div>
+
+  <div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
+</div>
+
 <%# </div> %>

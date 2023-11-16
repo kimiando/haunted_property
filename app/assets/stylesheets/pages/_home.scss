@@ -1,17 +1,58 @@
 // Specific CSS for your home-page
 .background-home {
-  background-image: asset-url("home.gif");
+  background: rgba(0, 0, 0, .45) asset-url("home2.jpg");
+  background-blend-mode: darken;
   background-repeat: no-repeat;
   background-size: cover;
-
+  color: white;
 }
 
-.container-home{
-  display: block;
-  align-content: center;
-  background-color: #B2B1B9;
-
-  .card {
-    background-color: #B2B1B9;
-  }
+.btn.btn-primary {
+  background-color: #3e5b5b;
+  color: white;
+  border-radius: 24px;
+  opacity: 0.7;
+  width: 214px;
+  height: 48px;
+  padding-top: 12px;
 }
+
+.btn.btn-primary:hover {
+  color: red;
+  background-color: #3e5b5b;
+}
+
+.header_container {
+  padding-top: 256px;
+  padding-left: 136px;
+}
+
+.card-text {
+  font-size: 20px;
+  font-family: fantasy;
+  font-style: oblique;
+}
+
+.header h1 {
+  padding-bottom: 32px;
+  font-family: fantasy;
+  font-size: 48px;
+}
+
+.header h2 {
+  font-size: 2rem;
+  font-family: fantasy;
+  padding-bottom: 8px;
+}
+
+
+
+// .container-home{
+//   display: block;
+//   align-content: center;
+//   background-color: #B2B1B9;
+
+//   .card {
+//     background-color: #B2B1B9;
+//   }
+// }

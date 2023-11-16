@@ -11,7 +11,7 @@
             <img src="https://100dayscss.com/codepen/jessica-potter.jpg" width="70" height="70" alt="Jessica Potter">
           </div>
 
-          <div class="name"><%= @user.name %></div>
+          <div class="name"><%= current_user.name %></div>
           <div class="job"></div>
 
           <div class="actions">
@@ -20,20 +20,6 @@
           </div>
         </div>
 
-        <%# <div class="stats">
-          <div class="box">
-            <span class="value">523</span>
-            <span class="parameter">Posts</span>
-          </div>
-          <div class="box">
-            <span class="value">1387</span>
-            <span class="parameter">Likes</span>
-          </div>
-          <div class="box">
-            <span class="value">146</span>
-            <span class="parameter">Follower</span>
-          </div>
-        </div> %>
       </div>
     </div>
   </div>
@@ -51,9 +37,24 @@
         <input type="radio" id="tab3" name="tabGroup1" class="tab">
         <label for="tab3">Completed</label>
 
+
         <div class="tab__content">
-          <h3>First Section</h3>
-          <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+        <% @bookings.each do |booking| %>
+        <div class="card-product">
+            <div class="image_card2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path booking.property.photo.key, height: 150, crop: :fill %>')">
+            <% end %>
+
+            <% @bookings.each do |booking| %>
+            <div class="card-product-infos">
+              <p>User: <%= booking.user.name %></p>
+          <p>Booking start: <%= booking.start_date %></p>
+          <p>Booking end: <%= booking.end_date %></p>
+          <p>Property Booked: <%= booking.property.name %></p>
+          <p>Property Description: <%= booking.property.description %></p>
+          </div>
+          <% end %>
+        </div>
+
         </div>
 
         <div class="tab__content">

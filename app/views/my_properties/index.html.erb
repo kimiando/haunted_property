@@ -1,4 +1,3 @@
-<%# <div class="container"> %>
   <div class="booking-container row">
     <div class="profile-container col-4">
   <div class="profile-photo" style="background-image: url(<%= image_path 'avatar1.png' %>)">
@@ -16,40 +15,33 @@
 
         <!-- active tab on page load gets checked attribute -->
         <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
-        <label for="tab1">All Bookings</label>
+        <label for="tab1">Request</label>
 
         <input type="radio" id="tab2" name="tabGroup1" class="tab">
-        <label for="tab2">Confirmed</label>
+        <label for="tab2">😭</label>
 
         <input type="radio" id="tab3" name="tabGroup1" class="tab">
-        <label for="tab3">Past Bookings</label>
+        <label for="tab3">🎃</label>
 
 
         <div class="tab__content">
         <div class="card-wrapper">
-        <% @bookings.each do |booking| %>
-        <%= render "booking_card", booking: booking %>
-          <% end %>
+        <%# need to but a button to see if the items are accepted or rejected %>
+        <h2>hello</h2>
         </div>
         </div>
 
         <div class="tab__content">
           <div class="card-wrapper">
-          <% @bookings.accepted.each do |booking| %>
-      <%= render "booking_card", booking: booking %>
-          <% end %>
+          <h2>hello</h2>
           </div>
         </div>
 
 
         <div class="tab__content">
-          <% @bookings.past.each do |booking| %>
-          <%= render "booking_card", booking: booking %>
-          <% end %>
+       <h2>hello</h2>
           </div>
         </div>
 
       </div>
     </div>
-  <%# </div>
-</div> %>

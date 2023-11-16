@@ -17,6 +17,9 @@
     <%= render "shared/flashes" %>
 
     <%= yield %>
+    <% unless params[:controller] == "pages" && params[:action] == "home" %>
+      <%= render "shared/footer" %>
+    <% end %>
     <%# <p class="notice"><%= notice </p> %>
     <%# <p class="alert"><%= alert </p> %>
   </body>

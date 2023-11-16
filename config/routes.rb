@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'my_properties/index'
   get 'my_bookings/index'
   devise_for :users
   root to: "pages#home"
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
 
 
   resources :properties, only: [:index, :show, :new, :create] do
-    resources :bookings, only: [:create]
+    resources :bookings, only: [:create, :update]
     resources :reviews, only: [:create]
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

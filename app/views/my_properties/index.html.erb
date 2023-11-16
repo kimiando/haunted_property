@@ -1,2 +1,47 @@
-<h1>MyProperties#index</h1>
-<p>Find me in app/views/my_properties/index.html.erb</p>
+  <div class="booking-container row">
+    <div class="profile-container col-4">
+  <div class="profile-photo" style="background-image: url(<%= image_path 'avatar1.png' %>)">
+    </div>
+    <div class="profile-information">
+      <h1><%= current_user.name %></h1>
+      <button class="btn btn-primary">Edit My Profile</button>
+      <button class="btn btn-primary"><%= link_to "My Bookings", my_bookings_path, class: "nav-link" %></button>
+      <button class="btn btn-primary"><%= link_to "My Rentals", my_properties_path, class: "nav-link" %></button>
+    </div>
+  </div>
+
+  <div class="col-8">
+    <div class="tab-wrap">
+
+        <!-- active tab on page load gets checked attribute -->
+        <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
+        <label for="tab1">Request</label>
+
+        <input type="radio" id="tab2" name="tabGroup1" class="tab">
+        <label for="tab2">😭</label>
+
+        <input type="radio" id="tab3" name="tabGroup1" class="tab">
+        <label for="tab3">🎃</label>
+
+
+        <div class="tab__content">
+        <div class="card-wrapper">
+        <%# need to but a button to see if the items are accepted or rejected %>
+        <h2>hello</h2>
+        </div>
+        </div>
+
+        <div class="tab__content">
+          <div class="card-wrapper">
+          <h2>hello</h2>
+          </div>
+        </div>
+
+
+        <div class="tab__content">
+       <h2>hello</h2>
+          </div>
+        </div>
+
+      </div>
+    </div>

@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
     @booking.property = @property
     if @booking.save
       flash[:notice] = "Booking created!"
-      redirect_to my_bookings_path(@mybookings)
+      redirect_to my_bookings_path(@my_bookings)
     else
       render "properties/show", status: :unprocessable_entity
     end

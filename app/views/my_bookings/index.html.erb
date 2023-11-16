@@ -41,7 +41,7 @@
         <div class="tab__content">
         <% @bookings.each do |booking| %>
         <div class="card-product">
-            <div class="image_card2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path booking.property.photo.key, height: 150, crop: :fill %>')">
+            <div class="image_card2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path booking.property.photo.key, height: 100, crop: :fill %>')">
             <% end %>
 
             <% @bookings.each do |booking| %>

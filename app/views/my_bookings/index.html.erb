@@ -1,0 +1,76 @@
+<%# <div class="container"> %>
+  <div class="row">
+    <div class="col-4">
+    <div class="frame">
+      <div class="center">
+
+        <div class="profile">
+          <div class="image">
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
+            <img src="https://100dayscss.com/codepen/jessica-potter.jpg" width="70" height="70" alt="Jessica Potter">
+          </div>
+
+          <div class="name"><%= @user.name %></div>
+          <div class="job"></div>
+
+          <div class="actions">
+            <button class="btn">My Bookings</button>
+            <button class="btn">My Rentals</button>
+          </div>
+        </div>
+
+        <%# <div class="stats">
+          <div class="box">
+            <span class="value">523</span>
+            <span class="parameter">Posts</span>
+          </div>
+          <div class="box">
+            <span class="value">1387</span>
+            <span class="parameter">Likes</span>
+          </div>
+          <div class="box">
+            <span class="value">146</span>
+            <span class="parameter">Follower</span>
+          </div>
+        </div> %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-8">
+    <div class="tab-wrap">
+
+        <!-- active tab on page load gets checked attribute -->
+        <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
+        <label for="tab1">Request</label>
+
+        <input type="radio" id="tab2" name="tabGroup1" class="tab">
+        <label for="tab2">Confirmed</label>
+
+        <input type="radio" id="tab3" name="tabGroup1" class="tab">
+        <label for="tab3">Completed</label>
+
+        <div class="tab__content">
+          <h3>First Section</h3>
+          <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+        </div>
+
+        <div class="tab__content">
+          <h3>Second Section</h3>
+          <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+
+          <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Morbi mattis ullamcorper velit. Pellentesque posuere. Etiam ut purus mattis mauris sodales aliquam. Praesent nec nisl a purus blandit viverra.</p>
+        </div>
+
+        <div class="tab__content">
+          <h3>Third Section</h3>
+          <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+
+          <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Morbi mattis ullamcorper velit. Pellentesque posuere. Etiam ut purus mattis mauris sodales aliquam. Praesent nec nisl a purus blandit viverra.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<%# </div> %>

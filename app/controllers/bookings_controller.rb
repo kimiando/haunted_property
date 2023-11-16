@@ -12,6 +12,7 @@ class BookingsController < ApplicationController
     end
   end
 
+end
   private
 
   def booking_params

@@ -8,5 +8,7 @@ class User < ApplicationRecord
   validates :name, presence: true, uniqueness: true
 
   has_many :bookings, dependent: :destroy
+
   has_many :properties, dependent: :destroy
+  has_many :booking_requests, through: :properties, source: :bookings
 end

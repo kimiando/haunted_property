@@ -1,6 +1,7 @@
 // CSS STATUS
 $max-tab-count: 5;
 $tab-wrap-border-radius: 6px;
+
 .tab-wrap {
   bottom: auto;
   transition: 0.3s box-shadow ease;
@@ -29,6 +30,9 @@ $tab-wrap-border-radius: 6px;
       z-index: 100;
       transform: translateY(0px);
       text-shadow: 0 0 0;
+      height: 644px;
+      overflow-y: scroll;
+      scroll-behavior: smooth;
     }
   }
   &:first-of-type:not(:last-of-type) + label {
@@ -115,14 +119,14 @@ $tab-wrap-border-radius: 6px;
   align-items: center;
   justify-content: center;
   background-color: #B2B1B9;
-  margin-top: 40px;
-  padding-bottom: 152;
+  margin-top: 24px;
   width: 384px;
   margin-left: 56px;
   margin-right: 40px;
   border-radius: 5px;
   flex-direction: column;
-
+  margin-bottom: 240px;
+  padding-bottom: 40px;
 }
 
 
@@ -178,4 +182,51 @@ color: green;
 .profile-information {
   text-align: center;
   color: blue;
+}
+
+.profile-information h1 {
+  font-size: 32px;
+  font-style: normal;
+  color: black;
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
+
+.booking_title {
+  background-color: #B2B1B9;
+  margin-top: 40px;
+  width: 384px;
+  margin-left: 56px;
+  margin-right: 40px;
+  border-radius: 5px;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+}
+
+.booking_title p {
+  font-size: 32px;
+  padding-left: 96px;
+  padding-top: 20px;
+}
+
+.booking-container.row > * {
+  height: 760px;
+  margin-top: 24px;
+  margin-bottom: 40px;
+}
+
+.profile_btn.btn-primary {
+  text-decoration: none;
+  color: black;
+  background-color: #3e5b5b;
+  border-radius: 24px;
+  width: 256px;
+  height: 48px;
+  padding-top: 12px;
+  font-size: 18px;
+}
+
+.profile_btn.btn-primary:hover {
+  color: white;
+  background-color: #3e5b5b;
 }

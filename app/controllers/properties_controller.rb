@@ -17,7 +17,7 @@ class PropertiesController < ApplicationController
 
     if @property.save
       flash[:notice] = "Property created!"
-      redirect_to my_properties_path
+      redirect_to property_path(@property)
     else
       flash[:alert] = "Property creation failed."
       render :new, status: :unprocessable_entity

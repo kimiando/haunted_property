@@ -55,3 +55,27 @@ body{
 .property-price {
   margin-left: 40px;
 }
+
+.card_name_price {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.card_name_price a {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  padding-top: 16px;
+  font-family: fantasy
+}
+
+.card_name_price a:hover {
+  color: red;
+}
+
+
+.card_name_price p {
+  font-family: fantasy
+}

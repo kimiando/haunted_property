@@ -11,4 +11,12 @@ class Booking < ApplicationRecord
   scope :pending,  -> { where(status: :pending) }
   scope :accepted, -> { where(status: :accepted) }
   scope :rejected, -> { where(status: :rejected) }
+
+  def number_of_days
+    ((end_date - start_date) / (60 * 60 * 24)).to_i
+  end
+
+  def total_price
+    property.price * number_of_days
+  end
 end

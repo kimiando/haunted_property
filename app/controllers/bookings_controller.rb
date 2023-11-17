@@ -22,10 +22,6 @@ class BookingsController < ApplicationController
     end
   end
 
-  def pending?
-    status == 'pending'
-  end
-
   private
 
   def booking_params

@@ -1,71 +1,50 @@
 <%# <div class="container"> %>
-
 <div class="booking-container row properties-container">
   <div class="col-4">
-
     <div class="booking_title">
       <p>My bookings</p>
     </div>
-
-      <div class="profile-container">
-
-        <div class="profile-photo" style="background-image: url(<%= image_path 'avatar1.png' %>)">
-        </div>
-
-        <div class="profile-information">
-          <h1><%= current_user.name %></h1>
-          <button class="profile_btn btn btn-primary">Edit My Profile</button>
-          <button class="btn btn-primary active"><%= link_to "My Bookings", my_bookings_path, class: "nav-link" %></button>
-          <button class="btn btn-primary"><%= link_to "My Rentals", my_properties_path, class: "nav-link" %></button>
-        </div>
-
+    <div class="profile-container">
+      <div class="profile-photo" style="background-image: url(<%= cl_image_path current_user.photo.key %>)">
       </div>
-
-  </div>
-
-
-  <div class="col-8">
-
-    <div class="tab-wrap">
-
-        <!-- active tab on page load gets checked attribute -->
-        <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
-        <label for="tab1">All Bookings</label>
-
-        <input type="radio" id="tab2" name="tabGroup1" class="tab">
-        <label for="tab2">Confirmed</label>
-
-        <input type="radio" id="tab3" name="tabGroup1" class="tab">
-        <label for="tab3">Past Bookings</label>
-
-
-        <div class="tab__content">
-        <div class="card-wrapper">
-        <% @bookings.each do |booking| %>
-        <%= render "booking_card", booking: booking %>
-          <% end %>
-        </div>
-        </div>
-
-        <div class="tab__content">
-          <div class="card-wrapper">
-          <% @bookings.accepted.each do |booking| %>
-      <%= render "booking_card", booking: booking %>
-          <% end %>
-          </div>
-        </div>
-
-
-        <div class="tab__content">
-          <% @bookings.past.each do |booking| %>
-          <%= render "booking_card", booking: booking %>
-          <% end %>
-          </div>
-        </div>
-
+      <div class="profile-information">
+        <h1><%= current_user.name %></h1>
+        <button class="profile_btn btn btn-primary">Edit My Profile</button>
+        <button class="btn btn-primary active"><%= link_to "My Bookings", my_bookings_path, class: "nav-link" %></button>
+        <button class="btn btn-primary"><%= link_to "My Rentals", my_properties_path, class: "nav-link" %></button>
       </div>
     </div>
-
-
   </div>
+  <div class="col-8">
+    <div class="tab-wrap">
+      <!-- active tab on page load gets checked attribute -->
+      <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
+      <label for="tab1">All Bookings</label>
+      <input type="radio" id="tab2" name="tabGroup1" class="tab">
+      <label for="tab2">Confirmed</label>
+      <input type="radio" id="tab3" name="tabGroup1" class="tab">
+      <label for="tab3">Past Bookings</label>
+      <div class="tab__content">
+        <div class="card-wrapper">
+          <% @bookings.each do |booking| %>
+            <%= render "booking_card", booking: booking %>
+          <% end %>
+        </div>
+      </div>
+      <div class="tab__content">
+        <div class="card-wrapper">
+          <% @bookings.accepted.each do |booking| %>
+            <%= render "booking_card", booking: booking %>
+          <% end %>
+        </div>
+      </div>
+      <div class="tab__content">
+        <% @bookings.past.each do |booking| %>
+          <%= render "booking_card", booking: booking %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 </div>

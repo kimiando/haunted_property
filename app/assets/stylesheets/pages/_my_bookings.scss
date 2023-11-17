@@ -181,7 +181,13 @@ color: green;
 
 .profile-information {
   text-align: center;
-  color: blue;
+  // color: blue;
+}
+
+.bookings-container {
+  .btn.active {
+    background-color: $info;
+  }
 }
 
 .profile-information h1 {

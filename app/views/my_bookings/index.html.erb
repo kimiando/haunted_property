@@ -1,5 +1,6 @@
 <%# <div class="container"> %>
-<div class="booking-container row">
+
+<div class="booking-container row properties-container">
   <div class="col-4">
 
     <div class="booking_title">
@@ -14,7 +15,7 @@
         <div class="profile-information">
           <h1><%= current_user.name %></h1>
           <button class="profile_btn btn btn-primary">Edit My Profile</button>
-          <button class="btn btn-primary"><%= link_to "My Bookings", my_bookings_path, class: "nav-link" %></button>
+          <button class="btn btn-primary active"><%= link_to "My Bookings", my_bookings_path, class: "nav-link" %></button>
           <button class="btn btn-primary"><%= link_to "My Rentals", my_properties_path, class: "nav-link" %></button>
         </div>
 
@@ -64,5 +65,5 @@
 
       </div>
     </div>
-  <%# </div>
-</div> %>
+  </div>
+</div>

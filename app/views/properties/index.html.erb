@@ -15,10 +15,13 @@
   <div class="cards">
     <% @properties.each do |property| %>
     <div class="card">
+    <% if property.photo.attached? %>
       <div class="image_card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path property.photo.key, height: 300, crop: :fill %>')">
+      <% else %>
+      <p>No photo attached</p>
+      <% end %>
       </div>
-        <%= link_to property.name, property_path(property), class: "property_name" %>
+        <%= link_to property.name, property_path(property), class: "property_link" %>
     </div>
     <% end %>
   </div>
-</div>

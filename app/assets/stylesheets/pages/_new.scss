@@ -1,27 +1,54 @@
 
 .new_property_page {
   .card-container {
-    width: 400px;
-    margin: 50px auto; /* Center the card container horizontally */
+    width: 800px;
+    margin: 50px auto;
   }
 
   .card {
-    border: 1px solid red; /* Border color for the card */
+    // border: 1px solid red; /* Border color for the card */
     border-radius: 10px; /* Optional: Add border-radius for rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
   }
 
   .card-header {
-    background-color: #007bff; /* Card header background color */
+    background-color: #1d2d2d; /* Card header background color */
     color: #fff; /* Card header text color */
     padding: 10px; /* Padding for the header */
-    border-bottom: 1px solid #ccc; /* Border color for the header */
+    // border-bottom: 1px solid #ccc; /* Border color for the header */
     border-radius: 10px 10px 0 0; /* Optional: Add border-radius for rounded corners */
     text-align: center;
+    // display:
+
   }
 
   .card-body {
-    padding: 20px; /* Padding for the card body */
+    padding: 20px;
   }
 
 }
+
+.create_btn {
+  background-color: #3e5b5b;
+  color: white;
+  border-radius: 24px;
+  opacity: 0.7;
+  width: 256px;
+  height: 48px;
+  padding-top: 4px;
+  margin-left:256px;
+
+}
+
+.create_btn:hover {
+  background-color: #1d2d2d;
+}
+
+
+// .new_property_page{
+//   background: rgba(0, 0, 0, .45) asset-url("horror.jpeg");
+//   background-blend-mode: darken;
+//   background-repeat: no-repeat;
+//   background-size:cover;
+//   color: white;
+// }

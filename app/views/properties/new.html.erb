@@ -2,7 +2,7 @@
   <div class="card-container">
     <div class="card">
       <div class="card-header">
-        <h1 class="text-center">Add a new property</h1>
+        <h3 class="text-center">Add a new property</h3>
       </div>
       <div class="card-body">
         <%= simple_form_for [@property] do |f| %>
@@ -12,7 +12,7 @@
           <%= f.input :location %>
           <%= f.input :price %>
           <%= f.input :description %>
-          <%= f.submit class: 'btn btn-primary' %>
+          <%= f.submit class: 'create_btn btn-primary' %>
         <% end %>
       </div>
     </div>

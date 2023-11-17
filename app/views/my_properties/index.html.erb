@@ -4,7 +4,7 @@
       <p>My Rentals</p>
     </div>
     <div class="profile-container">
-      <div class="profile-photo" style="background-image: url(<%= image_path 'avatar1.png' %>)">
+      <div class="profile-photo" style="background-image: url(<%= cl_image_path current_user.photo.key  %>)">
       </div>
       <div class="profile-information">
         <h1><%= current_user.name %></h1>

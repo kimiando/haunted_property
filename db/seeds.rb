@@ -51,7 +51,7 @@ file = File.open(Rails.root.join("db/seeds/properties/house1.webp"))
 property_2.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
 property_3 = Property.create!(
-  user: user3,
+  user: user1,
   name: "Ghoul's Retreat",
   description: "Escape to this desolate mansion perched on the edge of a forgotten cemetery. Ghoul's Retreat offers a spine-chilling sanctuary for those seeking a rendezvous with the paranormal.",
   category: "Cemetery",
@@ -62,7 +62,7 @@ file = File.open(Rails.root.join("db/seeds/properties/cemetery1.jpeg"))
 property_3.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
 property_4 = Property.create!(
-  user: user4,
+  user: user2,
   name: "Spectral Haven House",
   description: "Dare to spend the night in a haunted Victorian mansion, where the walls whisper secrets of a bygone era. Located in the spectral town of Ravenswood, Spectral Haven House is a portal to the supernatural.",
   category: "House",
@@ -95,7 +95,7 @@ file = File.open(Rails.root.join("db/seeds/properties/ferry1.jpeg"))
 property_6.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
 property_7 = Property.create!(
-  user: user3,
+  user: user1,
   name: "Séance Street Manor",
   description: "Step into the mystic on Séance Street, where this enigmatic manor holds séances of centuries past. Unearth the secrets of the afterlife in this haunted haven.",
   category: "House",
@@ -106,7 +106,7 @@ file = File.open(Rails.root.join("db/seeds/properties/house3.webp"))
 property_7.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
 property_8 = Property.create!(
-  user: user4,
+  user: user2,
   name: "Poltergeist Point Lodge",
   description: "Perched on the edge of a cliff, Poltergeist Point Lodge offers breathtaking views and spine-tingling encounters. Embrace the supernatural as you navigate through the haunted halls of this cliffside abode.",
   category: "House",
@@ -139,7 +139,7 @@ file = File.open(Rails.root.join("db/seeds/properties/castle1.avif"))
 property_10.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
 property_11 = Property.create!(
-  user: user3,
+  user: user1,
   name: "Widow's Watch Mansion",
   description: "Perched atop a cliff overlooking the restless sea, this haunted mansion in Moonlight Cove is rumored to be the residence of a grieving widow's ghost, forever waiting for her lost love.",
   category: "Cemetery",
@@ -150,7 +150,7 @@ file = File.open(Rails.root.join("db/seeds/properties/cemetery2.jpeg"))
 property_11.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
 property_12 = Property.create!(
-  user: user4,
+  user: user2,
   name: "Spectral Grove Retreat",
   description: "Hidden within an ancient, mist-shrouded forest, this haunted retreat offers an escape into nature's eerie embrace. Encounter ethereal spirits as you wander through the spectral grove.",
   category: "Cemetery",
@@ -183,7 +183,7 @@ file = File.open(Rails.root.join("db/seeds/properties/forest2.jpeg"))
 property_14.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
 property_15 = Property.create!(
-  user: user3,
+  user: user1,
   name: "Apparition Acres Farmhouse",
   description: "Escape to the countryside and experience the haunted history of this farmhouse surrounded by vast fields. The spirits of previous inhabitants are said to linger, manifesting in mysterious ways.",
   category: "Forest",
@@ -194,7 +194,7 @@ file = File.open(Rails.root.join("db/seeds/properties/forest3.jpeg"))
 property_15.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
 property_16 = Property.create!(
-  user: user4,
+  user: user2,
   name: "Wraithwind Manor",
   description: "Nestled at the edge of the sinister Wraithwind Forest, this manor is a haven for spectral beings. Encounter the whispers of the wind and the shadows that dance within the haunted halls.",
   category: "Hospital",
@@ -227,7 +227,7 @@ file = File.open(Rails.root.join("db/seeds/properties/hospital4.jpeg"))
 property_18.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
 property_19 = Property.create!(
-  user: user3,
+  user: user1,
   name: "Midnight Masquerade Mansion",
   description: "Enter a world of mystery and intrigue in this mansion where a ghostly masquerade unfolds every night at midnight. Witness the spirits donning phantom masks as they dance through the ages.",
   category: "Mansion",
@@ -238,7 +238,7 @@ file = File.open(Rails.root.join("db/seeds/properties/mansion1.webp"))
 property_19.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
 property_20 = Property.create!(
-  user: user4,
+  user: user2,
   name: "Shiverstone Castle",
   description: "Situated on the edge of a frozen lake, Shiverstone Castle is a chilling fortress with a history of icy apparitions. Encounter the frozen echoes of the past as you brave its haunted halls.",
   category: "Mansion",
@@ -249,7 +249,7 @@ file = File.open(Rails.root.join("db/seeds/properties/mansion2.jpeg"))
 property_20.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
 property_21 = Property.create!(
-  user: user1,
+  user: user2,
   name: "Wispwood Wonders Cottage",
   description: "Escape to the whimsical Wispwood Wonders Cottage, where mystical wisps illuminate the night. Encounter enchanted creatures and the ethereal wonders that reside in this charming abode.",
   category: "Mansion",
@@ -260,7 +260,7 @@ file = File.open(Rails.root.join("db/seeds/properties/mansion3.webp"))
 property_21.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
 property_22 = Property.create!(
-  user: user2,
+  user: user1,
   name: "Cursed Crypt Courtyard",
   description: "Step into the shadows of the cursed courtyard, where an ancient crypt holds the key to spectral secrets. Unearth the chilling tales that linger within the ghostly walls.",
   category: "Tower",
@@ -271,7 +271,7 @@ file = File.open(Rails.root.join("db/seeds/properties/tower2.webp"))
 property_22.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
 property_23 = Property.create!(
-  user: user3,
+  user: user1,
   name: "Eternal Echoes Emporium",
   description: "Venture into this haunted emporium, where echoes of past shoppers linger among the eerie merchandise. Located in the heart of Echo Hollow, it offers a shopping experience like no other.",
   category: "Tower",
@@ -282,7 +282,7 @@ file = File.open(Rails.root.join("db/seeds/properties/tower3.jpeg"))
 property_23.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
 property_24 = Property.create!(
-  user: user4,
+  user: user2,
   name: "Banshee Bluff Bungalow",
   description: "Perched on a bluff overlooking the misty moors, this bungalow is said to be haunted by the wailing banshees of old. Experience the spine-tingling echoes that resonate through the night.",
   category: "Tower",
@@ -292,23 +292,74 @@ property_24 = Property.create!(
 file = File.open(Rails.root.join("db/seeds/properties/tower4.webp"))
 property_24.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
-# property_25 = Property.create!(
+# new property
+property_25 = Property.create!(
+  user: user1,
+  name: "Wailing Winds Ferry",
+  description: "A haunted ferry that sails into the heart of the abyss, where lost souls cry out in eternal torment, and the ferryman is said to be a spectral figure cloaked in shadows.",
+  category: "Ferry",
+  location: "Norway",
+  price: 9999
+)
+file = File.open(Rails.root.join("db/seeds/properties/mansion2.jpeg"))
+property_25.photo.attach(io: file, filename: "property25.avif", content_type: "image/jpeg")
+
+property_26 = Property.create!(
+  user: user1,
+  name: "Voyage of the Vanquished",
+  description: "Navigating the Cursed Currents ferry, passengers face relentless storms, ghostly shipwrecks, and encounters with the souls of the vanquished, seeking redemption or revenge.",
+  category: "Mansion",
+  location: "Finland",
+  price: 3000
+)
+file = File.open(Rails.root.join("db/seeds/properties/mansion2.jpeg"))
+property_26.photo.attach(io: file, filename: "property26.jpeg", content_type: "image/jpeg")
+
+property_27 = Property.create!(
+  user: user2,
+  name: "Ghost Ship's Embrace",
+  description: "Enter the realm of the Sorrowful Shadows ferry, where the ghost ship's embrace envelops passengers in a haunting fog, revealing the tragic stories of those who once sailed the same route",
+  category: "Ferry",
+  location: "China",
+  price: 4800
+)
+file = File.open(Rails.root.join("db/seeds/properties/mansion2.jpeg"))
+property_27.photo.attach(io: file, filename: "property27.jpeg", content_type: "image/jpeg")
+
+# property_28 = Property.create!(
+#   user: user2,
+#   name: "Phantom Phoenix Plaza",
+#   description: "Discover the mysterious Phantom Phoenix Plaza, a shopping district frozen in time. The spectral storefronts showcase a bygone era, and the phoenix's ghostly presence is said to bring rebirth.",
+#   category: "Mansion",
+#   location: "Berlin",
+#   price: 2900
+# )
+# file = File.open(Rails.root.join("db/seeds/properties/mansion2.jpeg"))
+# property_28.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+
+
+# property_29 = Property.create!(
 #   user: user1,
 #   name: "Phantom Phoenix Plaza",
 #   description: "Discover the mysterious Phantom Phoenix Plaza, a shopping district frozen in time. The spectral storefronts showcase a bygone era, and the phoenix's ghostly presence is said to bring rebirth.",
 #   category: "Mansion",
 #   location: "Berlin",
-#   price: 4900
+#   price: 7800
 # )
 # file = File.open(Rails.root.join("db/seeds/properties/mansion2.jpeg"))
-# property_25.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+# property_29.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
 
-
-
-
-
-
+# property_30 = Property.create!(
+#   user: user1,
+#   name: "Phantom Phoenix Plaza",
+#   description: "Discover the mysterious Phantom Phoenix Plaza, a shopping district frozen in time. The spectral storefronts showcase a bygone era, and the phoenix's ghostly presence is said to bring rebirth.",
+#   category: "Mansion",
+#   location: "Berlin",
+#   price: 5600
+# )
+# file = File.open(Rails.root.join("db/seeds/properties/mansion2.jpeg"))
+# property_30.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
 
 

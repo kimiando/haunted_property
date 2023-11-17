@@ -1,46 +1,37 @@
-
-  <div class="booking-container row properties-container">
+<div class="booking-container row properties-container">
   <div class="col-4">
-
-  <div class="booking_title">
-       <p>My Rentals</p>
+    <div class="booking_title">
+      <p>My Rentals</p>
     </div>
-
     <div class="profile-container">
-  <div class="profile-photo" style="background-image: url(<%= image_path 'avatar1.png' %>)">
-    </div>
-    <div class="profile-information">
-      <h1><%= current_user.name %></h1>
-      <button class="profile_btn btn btn-primary">Edit My Profile</button>
-      <button class="btn btn-primary"><%= link_to "My Bookings", my_bookings_path, class: "nav-link" %></button>
-      <button class="btn btn-primary active"><%= link_to "My Rentals", my_properties_path, class: "nav-link" %></button>
-      <button class="btn btn-primary"><%= link_to "Add a new property", new_property_path, class: "nav-link" %></button>
+      <div class="profile-photo" style="background-image: url(<%= image_path 'avatar1.png' %>)">
+      </div>
+      <div class="profile-information">
+        <h1><%= current_user.name %></h1>
+        <button class="profile_btn btn btn-primary">Edit My Profile</button>
+        <button class="btn btn-primary"><%= link_to "My Bookings", my_bookings_path, class: "nav-link" %></button>
+        <button class="btn btn-primary active"><%= link_to "My Rentals", my_properties_path, class: "nav-link" %></button>
+        <button class="btn btn-primary"><%= link_to "Add a new property", new_property_path, class: "nav-link" %></button>
+      </div>
     </div>
   </div>
-  </div>
-
   <div class="col-8">
-
     <div class="tab-wrap">
       <!-- active tab on page load gets checked attribute -->
       <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
       <label for="tab1">Request</label>
-
       <input type="radio" id="tab2" name="tabGroup1" class="tab">
       <label for="tab2">Accepted</label>
-
       <input type="radio" id="tab3" name="tabGroup1" class="tab">
       <label for="tab3">Completed</label>
-
       <div class="tab__content">
         <div class="card-wrapper">
-        <%# need to but a button to see if the items are accepted or rejected %>
+          <%# need to but a button to see if the items are accepted or rejected %>
           <% @bookings_pending.each do |booking| %>
             <%= render "property_request", booking: booking %>
           <% end %>
         </div>
       </div>
-
       <div class="tab__content">
         <div class="card-wrapper">
           <% @bookings_accepted.each do |booking| %>
@@ -48,14 +39,11 @@
           <% end %>
         </div>
       </div>
-
-
       <div class="tab__content">
         <% @past_bookings.each do |booking| %>
           <%= render "property_request", booking: booking %>
         <% end %>
       </div>
     </div>
-
   </div>
 </div>

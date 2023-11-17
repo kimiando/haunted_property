@@ -1,24 +1,25 @@
 class PropertiesController < ApplicationController
   def index
     if params[:category]
-      @properties = Property.select{ |property| property.category ==  params[:category] }
+      @properties = Property.select { |property| property.category ==  params[:category] }
     else
       @properties = Property.all
     end
   end
 
   def new
-    @bookings = Boooking.find(params[:booking_id])
     @property = Property.new
   end
 
   def create
-    @bookings = Boooking.find(params[:booking_id])
-    @property = Property.new(list_params)
-    @bookings.list = @property
+    @property = Property.new(property_params)
+    @property.user = current_user
+
     if @property.save
-      # redirect_to list_path(@list)
+      flash[:notice] = "Property created!"
+      redirect_to my_properties_path
     else
+      flash[:alert] = "Property creation failed."
       render :new, status: :unprocessable_entity
     end
   end
@@ -26,5 +27,11 @@ class PropertiesController < ApplicationController
   def show
     @property = Property.find(params[:id])
     @booking = Booking.new
+  end
+
+  private
+
+  def property_params
+    params.require(:property).permit(:name, :description, :category, :location, :price, :photo)
   end
 end

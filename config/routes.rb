@@ -9,11 +9,11 @@ Rails.application.routes.draw do
   resources :my_bookings, only: [:index]
   resources :my_properties, only: [:index] # showing the user his properties AND the bookings his properties received # showing the user the bookings he made on other users properties
 
-
   resources :properties, only: [:index, :show, :new, :create] do
     resources :bookings, only: [:create]
     resources :reviews, only: [:create]
   end
+
   resources :bookings, only: [:update]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

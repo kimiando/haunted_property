@@ -1,12 +1,12 @@
 <%# <div class="container"> %>
-  <div class="booking-container row">
+  <div class="bookings-container row">
     <div class="profile-container col-4">
   <div class="profile-photo" style="background-image: url(<%= image_path 'avatar1.png' %>)">
     </div>
     <div class="profile-information">
       <h1><%= current_user.name %></h1>
       <button class="btn btn-primary">Edit My Profile</button>
-      <button class="btn btn-primary"><%= link_to "My Bookings", my_bookings_path, class: "nav-link" %></button>
+      <button class="btn btn-primary active"><%= link_to "My Bookings", my_bookings_path, class: "nav-link" %></button>
       <button class="btn btn-primary"><%= link_to "My Rentals", my_properties_path, class: "nav-link" %></button>
     </div>
   </div>
@@ -51,5 +51,5 @@
 
       </div>
     </div>
-  <%# </div>
-</div> %>
+  </div>
+</div>

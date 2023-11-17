@@ -1,15 +1,14 @@
 <div class="card-product">
   <%= cl_image_tag booking.property.photo.key, height: 100, crop: :fill %>
   <div class="card-product-infos">
-    <p>User: <%= booking.user.name %></p>
     <p>Booking start: <%= booking.start_date %></p>
     <p>Booking end: <%= booking.end_date %></p>
     <p>Property Booked: <%= booking.property.name %></p>
     </div>
     <% if booking.rejected? %>
-    <h3 class="red"><%= booking.status %></h3>
+    <h3 class="red"><i class="fa-solid fa-circle" style="color: #e92525;"></i><%= booking.status %></h3>
     <% elsif booking.accepted? %>
-    <h3 class="green"><%= booking.status %></h3>
+    <h3 class="green"><i class="fa-solid fa-circle" style="color: #54d21e;"></i><%= booking.status %></h3>
     <% else %>
     <h3><%= booking.status %></h3>
     <% end %>

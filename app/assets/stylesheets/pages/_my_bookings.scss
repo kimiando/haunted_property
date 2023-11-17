@@ -2,6 +2,7 @@
 $max-tab-count: 5;
 $tab-wrap-border-radius: 6px;
 
+
 .tab-wrap {
   bottom: auto;
   transition: 0.3s box-shadow ease;
@@ -152,13 +153,13 @@ $tab-wrap-border-radius: 6px;
   margin: 0;
 }
 
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
+// .card-product p {
+//   font-size: 12px;
+//   line-height: 1.4;
+//   opacity: .7;
+//   margin-bottom: 0;
+//   margin-top: 8px;
+// }
 
 .card-product .card-product-infos {
   padding: 16px;

@@ -10,7 +10,7 @@
             <%= cl_image_tag @property.photo.key, alt: "text", class: "card-img-top d-block w-100" %>
           </div>
           <div class="carousel-item">
-              <%= cl_image_tag @property.photo.key, alt: "text", class: "card-img-top d-block w-100" %>
+            <%= cl_image_tag @property.photo.key, alt: "text", class: "card-img-top d-block w-100" %>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
@@ -22,39 +22,35 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-            <div class="card-body">
-              <div class="card_title_text">
-                <h1 class=""><%= @property.name %></h1>
-                <h5 class="property-price"><strong> ¥<%= @property.price %> / night</strong></h5>
-              </div>
-              <h3 class="card-text-location"><%= @property.category %>, <%= @property.location %></h3>
-              <p class="card-text-description"><%= @property.description %></p>
-              <%# <a href="#" class="btn btn-primary">Book now! <%= link_to booking_path %></a>
-            </div>
-          </div>
+      <div class="card-body">
+        <div class="card_title_text">
+          <h1 class=""><%= @property.name %></h1>
+          <h5 class="property-price"><strong> <%= number_to_currency(@property.price, {unit: '¥', precision: 0}) %> / night</strong></h5>
         </div>
-
-    <%# <p>Form for booking pls edit after the booking controller is done</p> %>
-   <div data-controller="booking-price" data-booking-price-price-value="<%= @property.price %>" class="col-4 d-flex align-items-center">
-    <!-- Displays price/night on top of form -->
-    <div class="card card-form">
-      <p class='fw-bold fs-3'>¥<%= @property.price %> <small class='fw-light'>/ night</small></p>
-        <%= simple_form_for [@property, @booking], data: { controller: 'flatpickr' } do |f| %>
-          <%= f.input :start_date, as: :string, input_html: { data: { action: "change->booking-price#update", flatpickr_target: "startDate", booking_price_target: "startDate" } } %>
-          <%= f.input :end_date, as: :string, input_html: { data: { action: "change->booking-price#update", flatpickr_target: "endDate", booking_price_target: "endDate" } } %>
-          <%= f.submit 'Book now', class: 'btn btn-primary w-100' %>
-          <!-- Hidden when no dates chosen, total amount displayed here when changed -->
-          <p class='mt-3 d-flex align-items-center justify-content-between'>
-            <span data-booking-price-target='info'></span>
-            <span class='fw-bold' data-booking-price-target='price'></span>
-          </p>
-        <% end %>
+        <h3 class="card-text-location"><%= @property.category %>, <%= @property.location %></h3>
+        <p class="card-text-description"><%= @property.description %></p>
+        <%# <a href="#" class="btn btn-primary">Book now! <%= link_to booking_path %></a>
     </div>
   </div>
 </div>
-
-
-
+<%# <p>Form for booking pls edit after the booking controller is done</p> %>
+<div data-controller="booking-price" data-booking-price-price-value="<%= @property.price %>" class="col-4 d-flex align-items-center">
+  <!-- Displays price/night on top of form -->
+  <div class="card card-form">
+    <p class='fw-bold fs-3'><%= number_to_currency(@property.price, {unit: '¥', precision: 0}) %> <small class='fw-light'>/ night</small></p>
+    <%= simple_form_for [@property, @booking], data: { controller: 'flatpickr' } do |f| %>
+      <%= f.input :start_date, as: :string, input_html: { data: { action: "change->booking-price#update", flatpickr_target: "startDate", booking_price_target: "startDate" } } %>
+      <%= f.input :end_date, as: :string, input_html: { data: { action: "change->booking-price#update", flatpickr_target: "endDate", booking_price_target: "endDate" } } %>
+      <%= f.submit 'Book now', class: 'btn btn-primary w-100' %>
+      <!-- Hidden when no dates chosen, total amount displayed here when changed -->
+      <p class='mt-3 d-flex align-items-center justify-content-between'>
+        <span data-booking-price-target='info'></span>
+        <span class='fw-bold' data-booking-price-target='price'></span>
+      </p>
+    <% end %>
+  </div>
+</div>
+</div>
 <%# <p>guide for property</p> %>
 <%# <%= @property.name %>
 <%# <%= @property.description %>

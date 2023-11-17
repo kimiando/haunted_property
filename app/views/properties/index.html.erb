@@ -1,4 +1,8 @@
 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'banner_gif.gif' %>)">
+  <form action=“/action_page.php” class="fake_search_bar">
+    <input class="search_input" type=“text” placeholder="Find a house..." name=“search”>
+    <button class="search_button" type=“submit”>Search</button>
+  </form>
 </div>
 <div class="card_container row">
   <div class="side_bar">
@@ -21,7 +25,7 @@
         </div>
         <div class="card_name_price">
           <%= link_to property.name, property_path(property), class: "card_name" %>
-          <p>¥<%= property.price %> / night</p>
+          <p><%= number_to_currency(property.price, {unit: '¥', precision: 0}) %> / night</p>
         </div>
       </div>
     <% end %>

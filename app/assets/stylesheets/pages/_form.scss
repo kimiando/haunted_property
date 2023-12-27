@@ -1,0 +1,20 @@
+.forms-container{
+  margin: 20px;
+  color: aliceblue;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  border: 2px solid white-space;
+.form-text{
+  color: white;
+}
+.form-actions{
+  justify-content: center;
+  display: flex;
+}
+}
+.form-button{
+  display: flex;
+}

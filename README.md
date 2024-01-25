@@ -15,5 +15,5 @@ App home: https://haunted-house-rentals-a2aeda679e3f.herokuapp.com/
 
 
 ## Team Members
-- [Kimiko Ando] (https://github.com/kimiando)
+- [Kimiko Ando](https://github.com/kimiando)
 - [Nick Lin](https://github.com/Tsungtky)
